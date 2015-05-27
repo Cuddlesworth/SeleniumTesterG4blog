@@ -16,13 +16,15 @@ public class Stresstest {
     private WebDriver driver;
 
     @Before
-    public void setUp(){
-        File file = new File("C:/Users/Philip/Desktop/selenium/chromedriver.exe");
-        System.setProperty(Constants.CHROME_DRIVER, file.getAbsolutePath());
+    public void setUp() {
+        File file = new File(Constants.PATH_TO_CHROME_DRIVER);
 
+        System.setProperty(Constants.CHROME_DRIVER, file.getAbsolutePath());
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+
     }
 
     @After
