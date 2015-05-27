@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SeleniumTestForSida.iml" filepath="$PROJECT_DIR$/SeleniumTestForSida.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SeleniumTestG4Blog.iml" filepath="$PROJECT_DIR$/SeleniumTestG4Blog.iml" />
     </modules>
   </component>
 </project>
