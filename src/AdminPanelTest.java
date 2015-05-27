@@ -46,19 +46,19 @@ public class AdminPanelTest {
         driver.findElement(By.cssSelector("#log_in_form > div:nth-child(7) > input.btn.btn-success.btn-lg.animated.flip")).click();
 
         WebElement userName =driver.findElement(By.cssSelector("#sign_up_form > div:nth-child(1) > div.inner-addon.left-addon.col-md-4 > input"));
-        userName.sendKeys("abcdf");
+        userName.sendKeys("abcdasdssf");
 
         WebElement eMail =driver.findElement(By.cssSelector("#sign_up_form > div:nth-child(2) > div.inner-addon.left-addon.col-md-4 > input"));
-        eMail.sendKeys("abcdf@hotmail.com");
+        eMail.sendKeys("abcfawdssdf@hotmail.com");
 
         WebElement password=driver.findElement(By.cssSelector("#sign_up_form > div:nth-child(3) > div.inner-addon.left-addon.col-md-4 > input"));
-        password.sendKeys("abcdf");
+        password.sendKeys("abcsssdf");
 
         WebElement confirmPassword=driver.findElement(By.cssSelector(("#sign_up_form > div:nth-child(4) > div.inner-addon.left-addon.col-md-4 > input")));
-        confirmPassword.sendKeys("abcdf");
+        confirmPassword.sendKeys("abcsssdf");
 
         WebElement realName=driver.findElement(By.cssSelector(("#sign_up_form > div:nth-child(5) > div:nth-child(2) > input")));
-        realName.sendKeys("abcdf");
+        realName.sendKeys("abcdsssf");
 
         WebElement choseGender=driver.findElement(By.cssSelector(("#gender > option:nth-child(2)")));
         choseGender.click();
@@ -92,13 +92,13 @@ public class AdminPanelTest {
         clickLogInButton.click();
 
         WebElement searchForExistingUser=driver.findElement(By.cssSelector("#admin_panel > div:nth-child(1) > div.inner-addon.right-addon.col-md-6 > input"));
-        searchForExistingUser.sendKeys("abcdf");
+        searchForExistingUser.sendKeys("abcdasdssf");
 
         WebElement clickSearchButton=driver.findElement(By.cssSelector("#admin_panel > div:nth-child(1) > div:nth-child(3) > input"));
         clickSearchButton.click();
 
         WebElement inputExistingUserNameToDelete=driver.findElement(By.cssSelector("#delete_user_record"));
-        inputExistingUserNameToDelete.sendKeys("abcdf");
+        inputExistingUserNameToDelete.sendKeys("abcdasdssf");
 
         WebElement clickDeleteButton=driver.findElement(By.cssSelector("#execute_form > div:nth-child(2) > div:nth-child(3) > input"));
         clickDeleteButton.click();
