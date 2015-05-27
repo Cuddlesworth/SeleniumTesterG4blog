@@ -33,7 +33,7 @@ public class Stresstest {
     }
 
     @Test
-    public void blog_login_test() throws InterruptedException {
+    public void blog_stress_registration() throws InterruptedException {
         //open blog
         driver.get(Constants.BLOG_URL);
 
@@ -96,16 +96,46 @@ public class Stresstest {
         //open blog
         driver.get(Constants.BLOG_URL);
 
+        int loopController = 0;
+        int endLoop = 20;
+
+        int userNumber = 0;
+
         WebElement loginButton = driver.findElement(By.cssSelector("#navbar-collapse-3 > ul > li:nth-child(2) > a > i > b"));
         loginButton.click();
 
-        WebElement signupButton = driver.findElement(By.cssSelector("#log_in_form > div:nth-child(1) > div.inner-addon.left-addon.col-md-4 > input"));
-        signupButton.click();
+        WebElement userField = driver.findElement(By.cssSelector("#log_in_form > div:nth-child(1) > div.inner-addon.left-addon.col-md-4 > input"));
+        userField.sendKeys("admin");
 
-        Thread.sleep(1000);
+        WebElement passField = driver.findElement(By.cssSelector("#log_in_form > div:nth-child(3) > div.inner-addon.left-addon.col-md-4 > input"));
+        passField.sendKeys("admin");
+
+        WebElement signInButton = driver.findElement(By.cssSelector("#log_in_form > div:nth-child(7) > input.btn.btn-primary.btn-lg.animated.flip"));
+        signInButton.click();
 
 
+        while(loopController < endLoop) {
 
+             WebElement searchUser = driver.findElement(By.cssSelector("#admin_panel > div:nth-child(1) > div:nth-child(3) > input"));
+            searchUser.click();
+
+            userNumber++;
+
+            WebElement userDeleteField = driver.findElement(By.cssSelector("#delete_user_record"));
+            userDeleteField.sendKeys("user" + Integer.toString(userNumber));
+
+            WebElement deleteButton = driver.findElement(By.cssSelector("#execute_form > div:nth-child(2) > div:nth-child(3) > input"));
+            deleteButton.click();
+
+            WebElement backButton = driver.findElement(By.cssSelector("body > div.container > a.btn.btn-primary.btn-lg"));
+            backButton.click();
+
+            loopController++;
+
+
+        }
+
+        Thread.sleep(10000);
     }
 
 
