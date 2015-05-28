@@ -190,6 +190,7 @@ public class RegisterLogin {
         for (int i=0; i<50 ; i++) {
             WebElement userName =driver.findElement(By.cssSelector("#navbar-collapse-3 > ul > li:nth-child(2) > a"));
                     userName.click();
+            Thread.sleep(1000);
 
             WebElement userNameKeys =driver.findElement(By.cssSelector("#log_in_form > div:nth-child(1) > div.inner-addon.left-addon.col-md-4 > input"));
             userNameKeys.sendKeys("qwerty");
@@ -202,6 +203,7 @@ public class RegisterLogin {
 
             WebElement clickLogoutButton= driver.findElement(By.cssSelector("#navbar-collapse-3 > ul > li:nth-child(4) > a > i > b"));
             clickLogoutButton.click();
+            Thread.sleep(1000);
 
 
 
